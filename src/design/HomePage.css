@@ -68,9 +68,10 @@ html {
 .Inbox {
   display: flex;
   width: 500px; /* Максимальная ширина квадрата */
-  height: 400px; /* Максимальная высота квадрата */
+  height: 700px; /* Максимальная высота квадрата */
   margin-left: 10%;
   margin-top: 5%;
+  
 }
 
 @media (max-width: 600px) {
@@ -106,4 +107,48 @@ html {
   color: white;
   margin-top: 5px;
   letter-spacing: 1px;
+}
+
+.Inbox2 {
+  display: flex;
+  width: 360px; /* Максимальная ширина квадрата */
+  height: 125px; /* Максимальная высота квадрата */
+  margin-left: -5px;
+  margin-top: 3%;
+}
+
+hr { 
+  width: 2px; 
+  height: 110px; 
+  background-color: white;
+  margin-left: 0%;
+}
+
+.Opsis {
+  font-family: "Murecho", sans-serif;
+  color: white;
+  margin-left: 4%;
+  margin-top: 7%;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.ButtonAuth {
+  display: flex;
+  width: 310px; /* Максимальная ширина квадрата */
+  height: 70px; /* Максимальная высота квадрата */
+  margin-left: -5px;
+  margin-top: 3%;
+}
+
+.buttonAu {
+  background-color: #EEAB81;
+  border-radius: 365px;
+  width: 310px;
+  height: 60px;
+  text-align: center;
+  font-family: "Murecho", sans-serif;
+  font-size:medium;
+  font-weight: bold;
 }

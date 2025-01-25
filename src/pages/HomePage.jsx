@@ -1,9 +1,14 @@
 import { Button } from "@mui/material";
+import { useNavigate } from 'react-router-dom'; 
 import { useState } from "react";
 
-export function HomePage() {
-  const [state, setState] = useState("asdf");
 
+export function HomePage() { 
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => { 
+    navigate('/auth');
+  }; 
   return (
     <>
       <div className="container">
@@ -12,7 +17,7 @@ export function HomePage() {
             <nav className="nav">
               <ul className="list">
                 <li>
-                  <Button
+                  <Button 
                     color="white"
                     sx={{
                       fontSize: 10,
@@ -55,6 +60,16 @@ export function HomePage() {
               <li className="ysp">успеха</li>
               <li className="n">стань капитаном своей судьбы</li>
               <li className="n">и создай свою историю</li>
+              <div className="Inbox2">
+                <hr></hr>
+                <h4 className="Opsis">Платформа предлагает все необходимое для развития
+                                      молодого онлайн-образовательного предприятия.
+                                      Все инструменты для маркетинга, продаж объединены
+                                      в одном месте.</h4>
+              </div>
+              <div className="ButtonAuth">
+              <button class="buttonAu" onClick={handleButtonClick}>Попробовать</button>
+              </div>
             </ul>
           </div>
         </div>

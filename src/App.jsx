@@ -17,3 +17,9 @@ function App() {
 }
 
 export default App;
+
+/*import { RegistrationPage } from "./pages/RegistrationPage";
+      <Route path="/registration" element={<RegistrationPage />} />
+      <Route path="/directions" element={<DirectionsPage />} />
+      <Route path="/education" element={<EducationPage />} />
+      <Route path="/preparation" element={<PreparationPage />} /> */
