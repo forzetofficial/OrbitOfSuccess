@@ -16,6 +16,7 @@ export function HomePage() {
                     color="white"
                     sx={{
                       fontSize: 10,
+                      top: -7,
                     }}
                   >
                     Направления
@@ -27,6 +28,7 @@ export function HomePage() {
                     color="white"
                     sx={{
                       fontSize: 10,
+                      top: -7,
                     }}
                   >
                     Обучение
@@ -36,9 +38,9 @@ export function HomePage() {
                 <li>
                   <Button
                     color="white"
-                    size="small"
                     sx={{
                       fontSize: 10,
+                      top: -7,
                     }}
                   >
                     Подготовка к Огэ\Егэ
