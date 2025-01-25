@@ -1,0 +1,112 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  width: 100vw; /* Полная ширина экрана */
+  height: 100vh; /* Полная высота экрана */
+  position: relative;
+}
+
+.square {
+  width: 70%; /* Максимальная ширина квадрата */
+  height: 1080px; /* Максимальная высота квадрата */
+  background-color: #773575; /* Цвет квадрата */
+}
+
+/* Медиазапросы для адаптации на маленьких экранах */
+@media (max-width: 600px) {
+  .square {
+    width: 70vw; /* Ширина квадрата - 70% от ширины экрана на маленьких экранах */
+    height: 70vw; /* Высота квадрата - 70% от ширины экрана на маленьких экранах */
+  }
+}
+
+@media (max-height: 600px) {
+  .square {
+    width: 70vh; /* Ширина квадрата - 70% от высоты экрана на маленьких экранах */
+    height: 70vh; /* Высота квадрата - 70% от высоты экрана на маленьких экранах */
+  }
+}
+
+.Heading {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  display: flex;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
+  padding: 25px;
+}
+
+.Inbox {
+  display: flex;
+  width: 500px; /* Максимальная ширина квадрата */
+  height: 400px; /* Максимальная высота квадрата */
+  background-color: argb(0, 0, 0, 0);
+  margin-left: 7%;
+  margin-top: 7%;
+}
+
+@media (max-width: 600px) {
+  .Inbox {
+    width: 70vw; /* Ширина квадрата - 70% от ширины экрана на маленьких экранах */
+    height: 70vw; /* Высота квадрата - 70% от ширины экрана на маленьких экранах */
+  }
+}
+
+@media (max-height: 600px) {
+  .Inbox {
+    width: 70vh; /* Ширина квадрата - 70% от высоты экрана на маленьких экранах */
+    height: 70vh; /* Высота квадрата - 70% от высоты экрана на маленьких экранах */
+  }
+}
+
+.orb {
+  font-size: 40px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.ysp {
+  font-size: 75px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-top: -30px;
+}
+
+.n {
+  font-size: 20px;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-top: 5px;
+}
