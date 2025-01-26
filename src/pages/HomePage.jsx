@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
 
+
 export function HomePage() { 
+
   const navigate = useNavigate();
   const handleButtonClick = () => { navigate('/auth');}; 
   const napr = () => { navigate('/directions');}; 
@@ -21,7 +23,7 @@ export function HomePage() {
                     onClick={napr}
                     color="white"
                     sx={{
-                      fontSize: 10,
+                      fontSize: 12,
                       top: -7,
                     }}
                   >
@@ -34,7 +36,7 @@ export function HomePage() {
                     onClick={edu}
                     color="white"
                     sx={{
-                      fontSize: 10,
+                      fontSize: 12,
                       top: -7,
                     }}
                   >
@@ -47,7 +49,7 @@ export function HomePage() {
                     onClick={ogeege}
                     color="white"
                     sx={{
-                      fontSize: 10,
+                      fontSize: 12,
                       top: -7,
                     }}
                   >
@@ -71,7 +73,7 @@ export function HomePage() {
                                       в одном месте.</h4>
               </div>
               <div className="ButtonAuth">
-              <button class="buttonAu" onClick={handleButtonClick}>Попробовать</button>
+              <button className="buttonAu" onClick={handleButtonClick}>Попробовать</button>
               </div>
             </ul>
           </div>
