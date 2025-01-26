@@ -138,8 +138,8 @@ hr {
   display: flex;
   width: 310px; /* Максимальная ширина квадрата */
   height: 70px; /* Максимальная высота квадрата */
-  margin-left: -5px;
-  margin-top: 3%;
+  margin-left: 5px;
+  margin-top: 5%;
 }
 
 .buttonAu {

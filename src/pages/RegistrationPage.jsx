@@ -1,3 +1,4 @@
-export function RegistrationPAge() {
+export function RegistrationPage() {
     return <div>Registration</div>;
   }
+

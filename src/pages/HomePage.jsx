@@ -5,10 +5,10 @@ import { useState } from "react";
 
 export function HomePage() { 
   const navigate = useNavigate();
-
-  const handleButtonClick = () => { 
-    navigate('/auth');
-  }; 
+  const handleButtonClick = () => { navigate('/auth');}; 
+  const napr = () => { navigate('/directions');}; 
+  const edu = () => { navigate('/education');}; 
+  const ogeege = () => { navigate('/preparation');}; 
   return (
     <>
       <div className="container">
@@ -18,6 +18,7 @@ export function HomePage() {
               <ul className="list">
                 <li>
                   <Button 
+                    onClick={napr}
                     color="white"
                     sx={{
                       fontSize: 10,
@@ -29,7 +30,8 @@ export function HomePage() {
                 </li>
                 <li>|</li>
                 <li>
-                  <Button
+                  <Button 
+                    onClick={edu}
                     color="white"
                     sx={{
                       fontSize: 10,
@@ -41,7 +43,8 @@ export function HomePage() {
                 </li>
                 <li>|</li>
                 <li>
-                  <Button
+                  <Button 
+                    onClick={ogeege}
                     color="white"
                     sx={{
                       fontSize: 10,

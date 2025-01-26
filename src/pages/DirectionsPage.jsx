@@ -1,3 +1,3 @@
-export function DiractionPAge() {
+export function DirectionsPage() {
     return <div>Направления</div>;
   }
