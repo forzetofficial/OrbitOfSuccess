@@ -1,6 +1,7 @@
 import "./App.css";
 import "./design/HomePage.css";
 import "./design/AuthPage.css";
+import "./design/RegistrationPage.css";
 
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";

@@ -151,4 +151,29 @@ hr {
   font-family: "Murecho", sans-serif;
   font-size:medium;
   font-weight: bold;
+  border-style: none;
+}
+
+.buttonAu:hover {
+  background-color: #cc9471;
+  border-radius: 365px;
+  width: 310px;
+  height: 60px;
+  text-align: center;
+  font-family: "Murecho", sans-serif;
+  font-size:medium;
+  font-weight: bold;
+  border-style: none;
+}
+
+.buttonAu:active {
+  background-color: #9c7257;
+  border-radius: 365px;
+  width: 310px;
+  height: 60px;
+  text-align: center;
+  font-family: "Murecho", sans-serif;
+  font-size:medium;
+  font-weight: bold;
+  border-style: none;
 }

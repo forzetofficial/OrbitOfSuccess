@@ -11,8 +11,8 @@ html {
 .back {
     display: flex;
     background-color: #381A4B;
-    width:max-content;
-    height: max-content;
+    width: 1920px;
+    height: 1080px;
 }   
 
 .indiv {
@@ -27,6 +27,7 @@ html {
 }
 
 .Headbox {
+
     width: 500px;
     height: 100%;
     margin-left: auto;
@@ -41,15 +42,16 @@ html {
     color: white    ;
 }
 
-.Loginbox {
+.Loginbox1 {
     background-color: white;
     width: 375px;
     height: 45px;
     border-radius: 20px;
     margin-left: 13%;
+    margin-top: -2px;
 }
 
-.Logintext {
+.Logintext1 {
     margin-left: 13%;
     color: white;
     margin-top: 45px;
@@ -57,17 +59,39 @@ html {
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
     font-style: normal;
+    margin-top: 60px;
 }
 
-.Passwordbox {
+.Etext {
+    margin-left: 13%;
+    color: white;
+    margin-top: 45px;
+    margin-bottom: 7px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    margin-top: 15px;
+}
+
+.Ebox {
     background-color: white;
     width: 375px;
     height: 45px;
     border-radius: 20px;
     margin-left: 13%;
+    margin-top: -2px;
 }
 
-.Passwordtext {
+.Passwordbox1 {
+    background-color: white;
+    width: 375px;
+    height: 45px;
+    border-radius: 20px;
+    margin-left: 13%;
+    margin-top: -2px;
+}
+
+.Passwordtext1 {
     color: white;
     margin-left: 13%;
     margin-top: 45px;
@@ -75,9 +99,19 @@ html {
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
     font-style: normal;
+    margin-top: 15px;
 }
 
-.RevPasswordtext {
+.Passwordbox12 {
+    background-color: white;
+    width: 375px;
+    height: 45px;
+    border-radius: 20px;
+    margin-left: 13%;
+    margin-top: -2px;
+}
+
+.Passwordtext11 {
     color: white;
     margin-left: 13%;
     margin-top: 30px;
@@ -85,6 +119,7 @@ html {
     font-family: "Montserrat", sans-serif;
     font-weight: lighter;
     font-style: normal;
+    margin-top: 15px;
 }
 
 .Button {
@@ -95,52 +130,9 @@ html {
     margin-top: 7%;
 }
   
-.buttonAuth {
+.buttonrev {
     background-color: #F3CDC8;
     border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:medium;
-    font-weight: bolder;
-    margin-left: 5%;
-    font-size:14px;
-}
-
-.buttonAuth:hover {
-    background-color: #f0c7c2;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:medium;
-    font-weight: bolder;
-    margin-left: 5%;
-    font-size:14px;
-}
-
-.buttonAuth:active {
-    background-color: #c9a09b;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:medium;
-    font-weight: bolder;
-    margin-left: 5%;
-    font-size:14px;
-}
-
-.buttonReg {
-    background-color: #E79198;
-    border-radius: 365px;
-    border-style: none;
     width: 320px;
     height: 45px;
     text-align: center;
@@ -148,37 +140,4 @@ html {
     font-size:14px;
     font-weight: bolder;
     margin-left: 5%;
-}
-
-.buttonReg:hover {
-    background-color: #d18187;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:14px;
-    font-weight: bolder;
-    margin-left: 5%;
-}
-
-.buttonReg:active {
-    background-color: #b67076;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:14px;
-    font-weight: bolder;
-    margin-left: 5%;
-}
-
-#fullWidth {
-    width: 350px; /* Максимальная ширина квадрата */
-    height: 50px;
-    margin-top: 80%;
-    margin-left: 100px;
 }

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
 
-
 export function HomePage() { 
 
   const navigate = useNavigate();
