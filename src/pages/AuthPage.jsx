@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
+import axios from "axios";
 
 export function AuthPage() {
   const navigate = useNavigate();
@@ -31,20 +32,18 @@ export function AuthPage() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleChangep = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleChangee = (event) => {
-    setEmail(event.target.value);
-  };
+  const handleChangep = (event) => {setPassword(event.target.value);};
+  const handleChangee = (event) => {setEmail(event.target.value);};
 
   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-]).{8,}$/;
 
   const clicktest = () => {
-    console.log(emailRegex.test(email));
-    console.log(passwordRegex.test(password)); // Здесь вы можете использовать значение пароля
+    const response = axios.post("http://localhost:8080/api/v1/auth/login", {
+      email,
+      password,
+  });
+  console.log('LOG:', response);
   };
 
   return (
@@ -60,7 +59,7 @@ export function AuthPage() {
                 type="email"
                 value={email}
                 onChange={handleChangee}
-                fullWidth
+
               />
             </div>
             <h5 className="Passwordtext">Пароль</h5>
@@ -70,7 +69,7 @@ export function AuthPage() {
                 type="password"
                 value={password}
                 onChange={handleChangep}
-                fullWidth
+
               />
             </div>
             <Button

@@ -10,6 +10,7 @@ export function HomePage() {
   const napr = () => { navigate('/directions');}; 
   const edu = () => { navigate('/education');}; 
   const ogeege = () => { navigate('/preparation');}; 
+
   return (
     <>
       <div className="container">
