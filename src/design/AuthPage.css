@@ -1,184 +1,136 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+.back {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #381a4b;
+  width: 100vw;
+  height: 100vh;
 }
 
-.back {
-    display: flex;
-    background-color: #381A4B;
-    width:max-content;
-    height: max-content;
-}   
-
 .indiv {
-    display: flex;
-    background-color: #773575;
-    width: 500px;
-    height: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    border-radius: 30px;
+  display: flex;
+  background-color: #773575;
+  width: 500px;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  border-radius: 30px;
 }
 
 .Headbox {
-    width: 500px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 500px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .HEAD {
-    text-align: center;
-    margin-top: 12%;
-    font-size: 25px;
-    font-family: "Dela Gothic One", sans-serif;
-    color: white    ;
+  text-align: center;
+  margin-top: 12%;
+  font-size: 25px;
+  font-family: "Dela Gothic One", sans-serif;
+  color: white;
 }
 
 .Loginbox {
-    background-color: white;
-    width: 375px;
-    height: 45px;
-    border-radius: 20px;
-    margin-left: 13%;
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
 }
 
 .Logintext {
-    margin-left: 13%;
-    color: white;
-    margin-top: 45px;
-    margin-bottom: 7px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: lighter;
-    font-style: normal;
+  margin-left: 13%;
+  color: white;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
 }
 
 .Passwordbox {
-    background-color: white;
-    width: 375px;
-    height: 45px;
-    border-radius: 20px;
-    margin-left: 13%;
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
 }
 
 .Passwordtext {
-    color: white;
-    margin-left: 13%;
-    margin-top: 45px;
-    margin-bottom: 7px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: lighter;
-    font-style: normal;
+  color: white;
+  margin-left: 13%;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
 }
 
 .RevPasswordtext {
-    color: white;
-    margin-left: 13%;
-    margin-top: 30px;
-    margin-bottom: 7px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: lighter;
-    font-style: normal;
+  color: white;
+  margin-left: 13%;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
 }
 
 .Button {
-    display: flex;
-    width: 320px; /* Максимальная ширина квадрата */
-    height: 45px; /* Максимальная высота квадрата */
-    margin-left: 16%;
-    margin-top: 7%;
+  display: flex;
+  width: 320px; /* Максимальная ширина квадрата */
+  height: 45px; /* Максимальная высота квадрата */
+  margin-left: 16%;
+  margin-top: 7%;
 }
-  
+
 .buttonAuth {
-    background-color: #F3CDC8;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:medium;
-    font-weight: bolder;
-    margin-left: 5%;
-    font-size:14px;
+  background-color: #f3cdc8;
+  border-radius: 365px;
+  border-style: none;
+  width: 320px;
+  height: 45px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  font-weight: bolder;
+  margin-left: 5%;
+  font-size: 14px;
 }
 
 .buttonAuth:hover {
-    background-color: #f0c7c2;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:medium;
-    font-weight: bolder;
-    margin-left: 5%;
-    font-size:14px;
+  background-color: #f0c7c2;
 }
 
 .buttonAuth:active {
-    background-color: #c9a09b;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:medium;
-    font-weight: bolder;
-    margin-left: 5%;
-    font-size:14px;
+  background-color: #c9a09b;
 }
 
 .buttonReg {
-    background-color: #E79198;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:14px;
-    font-weight: bolder;
-    margin-left: 5%;
+  background-color: #e79198;
+  border-radius: 365px;
+  border-style: none;
+  width: 320px;
+  height: 45px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  margin-left: 5%;
 }
 
 .buttonReg:hover {
-    background-color: #d18187;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:14px;
-    font-weight: bolder;
-    margin-left: 5%;
+  background-color: #d18187;
 }
 
 .buttonReg:active {
-    background-color: #b67076;
-    border-radius: 365px;
-    border-style: none;
-    width: 320px;
-    height: 45px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size:14px;
-    font-weight: bolder;
-    margin-left: 5%;
+  background-color: #b67076;
 }
 
 #fullWidth {
-    width: 350px; /* Максимальная ширина квадрата */
-    height: 50px;
-    margin-top: 80%;
-    margin-left: 100px;
+  width: 350px; /* Максимальная ширина квадрата */
+  height: 50px;
+  margin-top: 80%;
+  margin-left: 100px;
 }
