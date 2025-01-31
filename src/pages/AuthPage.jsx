@@ -39,7 +39,7 @@ export function AuthPage() {
   const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-]).{8,}$/;
 
   const clicktest = () => {
-    const response = axios.post("http://localhost:8080/api/v1/auth/login", {
+    const response = axios.post("http://31.130.150.188:8080/api/v1/auth/login", {
       email,
       password,
   });

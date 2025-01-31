@@ -30,7 +30,7 @@ export function RegistrationPage() {
       const username = login;
   
       try {
-        const response = await axios.post("http://localhost:8080/api/v1/auth/register", {
+        const response = await axios.post("http://31.130.150.188:8080/api/v1/auth/register", {
           email,
           password,
           username,
