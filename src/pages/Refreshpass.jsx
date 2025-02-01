@@ -1,42 +1,39 @@
-import { Button } from "@mui/material";
+import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import axios from "axios";
+
+import { Button } from "@mui/material";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 
-import axios from "axios";
 
-export function RegistrationPage() {
+export function RefreshPage() {
   const navigate = useNavigate();
+  const params = useParams();
+
   const clickrev = () => {navigate("/auth");};
 
-  const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
-  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-]).{8,}$/;
-  const loginRegex = /^[a-z0-9](-?[a-z0-9]){2,20}$/i;
-
-  const [login, setlogin] = useState("");
-  const Loginset = (event) => {setlogin(event.target.value);};
-  const [email, setEmail] = useState("");
-  const Emailset = (event) => {setEmail(event.target.value);};
   const [pass1, setPasswordreg1] = useState("");
   const Pass1set = (event) => {setPasswordreg1(event.target.value);};
   const [pass2, setPasswordreg2] = useState("");
   const Pass2set = (event) => {setPasswordreg2(event.target.value);};
-
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-]).{8,}$/;
 
   const clicktest = async () => {
-    if (loginRegex.test(login) && emailRegex.test(email) && passwordRegex.test(pass1) && pass1 === pass2) {
+    const link = params.url;
+
+    if (passwordRegex.test(pass1) && pass1 === pass2) {
       const password = pass1;
-      const username = login;
-  
       try {
-        const response = await axios.post("http://31.130.150.188:8080/api/v1/auth/register", {
-          email,
-          password,
-          username,
+        const response = await axios.post("http://31.130.150.188:8080/api/v1/auth/change_password", {
+            link,
+            password,
         });
 
+
         if (response.status === 200) { 
-          console.log("Success"); 
+            navigate("/Auth");
         } 
       } catch (error) {
 
@@ -50,37 +47,16 @@ export function RegistrationPage() {
           console.log("Error message:", error.message);
         }
       }
-    } else {
-      console.log("Validation failed");
     }
   };
-  
 
-  return (
-    <>
-      <div className="back">
+    return <>
+        <div className="back">
         <div className="indiv">
           <div className="Headbox">
-            <header className="HEAD">РЕГИСТАЦИЯ</header>
-            <h5 className="Logintext1">Логин</h5>
-            <div className="Loginbox1">
-              <TextField 
-              id="fullWidth"
-              type="login"
-                value={login}
-                onChange={Loginset}
-              />
-            </div>
-            <h5 className="Etext">E-mail</h5>
-            <div className="Ebox">
-              <TextField 
-              id="fullWidth" 
-              type="email"
-                value={email}
-                onChange={Emailset}
-              />
-            </div>
-            <h5 className="Passwordtext1">Пароль</h5>
+            <header className="HEAD">ИЗМЕНЕНИЕ ПАРОЛЯ</header>
+            <h5 className='Smena'>Введите новый пароль чтобы изменить текущий </h5>
+            <h5 className="Passwordtext2">Новый пароль</h5>
             <div className="Passwordbox1">
               <TextField 
               id="fullWidth" 
@@ -100,7 +76,7 @@ export function RegistrationPage() {
             </div>
             <div className="Button">
               <button className="buttonrev" onClick={clicktest}>
-                Зарегистрироваться
+                Сохранить
               </button>
             </div>
             <Button
@@ -119,5 +95,4 @@ export function RegistrationPage() {
         </div>
       </div>
     </>
-  );
-}
+  }

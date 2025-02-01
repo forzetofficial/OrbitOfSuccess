@@ -182,3 +182,83 @@ html {
     margin-top: 80%;
     margin-left: 100px;
 }
+
+.open-modal-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-modal-button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Скрываем модальное окно по умолчанию */
+    visibility: hidden; /* Не позволяет кликам проходить через него */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Анимация */
+}
+
+.modal.open {
+    opacity: 1; /* Показываем модальное окно */
+    visibility: visible; /* Позволяет кликам проходить через него */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Ширина модального окна */
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+button[type="button1"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[type="button1"]:hover {
+    background-color: #c82333;
+}

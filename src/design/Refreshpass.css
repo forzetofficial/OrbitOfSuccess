@@ -1,0 +1,156 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  display: flex;
+  background-color: #381a4b;
+  width: 1920px;
+  height: 1080px;
+}
+
+.indiv {
+  display: flex;
+  background-color: #773575;
+  width: 500px;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  border-radius: 30px;
+}
+
+.Headbox {
+  width: 500px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.HEAD {
+  text-align: center;
+  margin-top: 12%;
+  font-size: 25px;
+  font-family: "Dela Gothic One", sans-serif;
+  color: white;
+}
+
+.Loginbox1 {
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
+  margin-top: -2px;
+}
+
+.Logintext1 {
+  margin-left: 13%;
+  color: white;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  margin-top: 60px;
+}
+
+.Etext {
+  margin-left: 13%;
+  color: white;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  margin-top: 15px;
+}
+
+.Ebox {
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
+  margin-top: -2px;
+}
+
+.Passwordbox1 {
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
+  margin-top: -2px;
+}
+
+.Passwordtext2 {
+  color: white;
+  margin-left: 13%;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  margin-top: 50px;
+}
+
+.Passwordbox12 {
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
+  margin-top: -2px;
+}
+
+.Passwordtext11 {
+  color: white;
+  margin-left: 13%;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+  margin-top: 15px;
+}
+
+.Button {
+  display: flex;
+  width: 320px; /* Максимальная ширина квадрата */
+  height: 45px; /* Максимальная высота квадрата */
+  margin-left: 16%;
+  margin-top: 7%;
+}
+
+.buttonrev {
+  background-color: #f3cdc8;
+  border-radius: 365px;
+  width: 320px;
+  height: 45px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  margin-left: 5%;
+  border-style: none;
+}
+
+.buttonrev:hover {
+  background-color: #dcbcb7;
+}
+
+.buttonrev:active {
+  background-color: #ab918d;
+}
+
+.Smena {
+    text-align: center;
+    color: white;
+}
