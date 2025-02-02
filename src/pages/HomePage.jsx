@@ -11,6 +11,10 @@ export function HomePage() {
   const edu = () => { navigate('/education');}; 
   const ogeege = () => { navigate('/preparation');}; 
 
+  const [hover1, setHover1] = useState(false);
+  const [hover2, setHover2] = useState(false);
+  const [hover3, setHover3] = useState(false);
+
   return (
     <>
       <div className="container">
@@ -25,8 +29,12 @@ export function HomePage() {
                     sx={{
                       fontSize: 12,
                       top: -7,
+                      transition: 'transform 0.2s', // Плавный переход
+                      transform: hover1 ? 'scale(1.1)' : 'scale(1)', // Увеличение при наведении
                     }}
-                  >
+                    onMouseEnter={() => setHover1(true)} // Устанавливаем состояние при наведении
+                    onMouseLeave={() => setHover1(false)} // Сбрасываем состояние при уходе мыши
+                  > 
                     Направления
                   </Button>
                 </li>
@@ -38,8 +46,12 @@ export function HomePage() {
                     sx={{
                       fontSize: 12,
                       top: -7,
+                      transition: 'transform 0.2s', // Плавный переход
+                      transform: hover2 ? 'scale(1.1)' : 'scale(1)', // Увеличение при наведении
                     }}
-                  >
+                    onMouseEnter={() => setHover2(true)} // Устанавливаем состояние при наведении
+                    onMouseLeave={() => setHover2(false)} // Сбрасываем состояние при уходе мыши
+                  > 
                     Обучение
                   </Button>
                 </li>
@@ -51,8 +63,12 @@ export function HomePage() {
                     sx={{
                       fontSize: 12,
                       top: -7,
+                      transition: 'transform 0.2s', // Плавный переход
+                      transform: hover3 ? 'scale(1.1)' : 'scale(1)', // Увеличение при наведении
                     }}
-                  >
+                    onMouseEnter={() => setHover3(true)} // Устанавливаем состояние при наведении
+                    onMouseLeave={() => setHover3(false)} // Сбрасываем состояние при уходе мыши
+                  > 
                     Подготовка к Огэ\Егэ
                   </Button>
                 </li>

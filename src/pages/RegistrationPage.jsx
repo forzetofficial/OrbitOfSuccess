@@ -9,16 +9,22 @@ export function RegistrationPage() {
   const navigate = useNavigate();
   const clickrev = () => {navigate("/auth");};
 
+  const [error1, setError1] = useState(false);
+  const [error, setError] = useState(false);
+
   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
   const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#?!@$%^&*-]).{8,}$/;
   const loginRegex = /^[a-z0-9](-?[a-z0-9]){2,20}$/i;
 
   const [login, setlogin] = useState("");
   const Loginset = (event) => {setlogin(event.target.value);};
+
   const [email, setEmail] = useState("");
   const Emailset = (event) => {setEmail(event.target.value);};
+
   const [pass1, setPasswordreg1] = useState("");
   const Pass1set = (event) => {setPasswordreg1(event.target.value);};
+
   const [pass2, setPasswordreg2] = useState("");
   const Pass2set = (event) => {setPasswordreg2(event.target.value);};
 
@@ -36,7 +42,7 @@ export function RegistrationPage() {
         });
 
         if (response.status === 200) { 
-          console.log("Success"); 
+          navigate("/auth");
         } 
       } catch (error) {
 
@@ -51,7 +57,14 @@ export function RegistrationPage() {
         }
       }
     } else {
-      console.log("Validation failed");
+      if (pass1 !== pass2){
+        setError1(true);
+        setTimeout(() => setError1(false), 3000);
+      }
+      else if ((loginRegex.test(login) && emailRegex.test(email)) !== true){
+        setError(true);
+        setTimeout(() => setError(false), 3000);
+      }
     }
   };
   
@@ -102,6 +115,8 @@ export function RegistrationPage() {
               <button className="buttonrev" onClick={clicktest}>
                 Зарегистрироваться
               </button>
+              {error1 && <div className="error-message">Пароли не совпадают</div>}
+              {error && <div className="error-message">Неправильный логин или e-mail</div>}
             </div>
             <Button
               onClick={clickrev}

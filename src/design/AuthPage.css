@@ -262,3 +262,23 @@ button[type="button1"] {
 button[type="button1"]:hover {
     background-color: #c82333;
 }
+
+.error-message {
+    position: fixed; /* Фиксируем позицию сообщения */
+    top: 20px; /* Располагаем его в верхней части экрана */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Сдвигаем на половину ширины для центрирования */
+    background-color: rgba(162, 0, 255, 0.8); /* Полупрозрачный красный фон */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 5px; /* Скругление углов */
+    z-index: 1000; /* Повышаем уровень слоя */
+    animation: fadeInOut 3s forwards; /* Анимация появления и исчезновения */
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}

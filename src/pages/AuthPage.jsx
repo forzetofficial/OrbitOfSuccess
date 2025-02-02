@@ -22,7 +22,7 @@ const EmailModal = ({ isOpen, onClose }) => {
       } catch (error) {
 
         console.error('Error during registration:', error);
-        if (error.response) {
+        if (error.response === 400) {
 
           console.log("Error status:", error.response.status);
           console.log("Error data:", error.response.data);
@@ -77,7 +77,7 @@ export function AuthPage() {
       setIsModalOpen(!isModalOpen);
   };
 
-  
+  const [error, setError] = useState(false);
 
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -111,7 +111,9 @@ export function AuthPage() {
         }
       }
     } else {
-      console.log("Validation failed");
+      setError(true);
+            // Скрываем сообщение через 3 секунды
+      setTimeout(() => setError(false), 3000);
     }
   };
 
@@ -137,7 +139,6 @@ export function AuthPage() {
                 type="password"
                 value={password}
                 onChange={handleChangep}
-
               />
             </div>
             <Button
@@ -157,6 +158,7 @@ export function AuthPage() {
               <button className="buttonAuth" onClick={clicktest}>
                 Войти
               </button>
+              {error && <div className="error-message">Неправильный логин или пароль</div>}
             </div>
             <div className="Button">
               <button className="buttonReg" onClick={clickreg}>
@@ -189,7 +191,7 @@ const modalStyle = {
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  backgroundColor: 'rgba(0, 0, 0, 0.6)',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -199,5 +201,5 @@ const modalContentStyle = {
   background: 'white',
   padding: '20px',
   borderRadius: '5px',
-  boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+  boxShadow: '0 2px 10px rgba(255, 255, 255, 0.6)',
 };
