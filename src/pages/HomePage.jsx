@@ -1,15 +1,21 @@
 import { Button } from "@mui/material";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-
-export function HomePage() { 
-
+export function HomePage() {
   const navigate = useNavigate();
-  const handleButtonClick = () => { navigate('/auth');}; 
-  const napr = () => { navigate('/directions');}; 
-  const edu = () => { navigate('/education');}; 
-  const ogeege = () => { navigate('/preparation');}; 
+  const handleButtonClick = () => {
+    navigate("/auth");
+  };
+  const napr = () => {
+    navigate("/directions");
+  };
+  const edu = () => {
+    navigate("/education");
+  };
+  const ogeege = () => {
+    navigate("/preparation");
+  };
 
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
@@ -23,52 +29,52 @@ export function HomePage() {
             <nav className="nav">
               <ul className="list">
                 <li>
-                  <Button 
+                  <Button
                     onClick={napr}
                     color="white"
                     sx={{
-                      fontSize: 12,
-                      top: -7,
-                      transition: 'transform 0.2s', // Плавный переход
-                      transform: hover1 ? 'scale(1.1)' : 'scale(1)', // Увеличение при наведении
+                      fontSize: 8,
+                      top: -3,
+                      transition: "transform 0.2s", // Плавный переход
+                      transform: hover1 ? "scale(1.1)" : "scale(1)", // Увеличение при наведении
                     }}
                     onMouseEnter={() => setHover1(true)} // Устанавливаем состояние при наведении
                     onMouseLeave={() => setHover1(false)} // Сбрасываем состояние при уходе мыши
-                  > 
+                  >
                     Направления
                   </Button>
                 </li>
                 <li>|</li>
                 <li>
-                  <Button 
+                  <Button
                     onClick={edu}
                     color="white"
                     sx={{
-                      fontSize: 12,
-                      top: -7,
-                      transition: 'transform 0.2s', // Плавный переход
-                      transform: hover2 ? 'scale(1.1)' : 'scale(1)', // Увеличение при наведении
+                      fontSize: 8,
+                      top: -3,
+                      transition: "transform 0.2s", // Плавный переход
+                      transform: hover2 ? "scale(1.1)" : "scale(1)", // Увеличение при наведении
                     }}
                     onMouseEnter={() => setHover2(true)} // Устанавливаем состояние при наведении
                     onMouseLeave={() => setHover2(false)} // Сбрасываем состояние при уходе мыши
-                  > 
+                  >
                     Обучение
                   </Button>
                 </li>
                 <li>|</li>
                 <li>
-                  <Button 
+                  <Button
                     onClick={ogeege}
                     color="white"
                     sx={{
-                      fontSize: 12,
-                      top: -7,
-                      transition: 'transform 0.2s', // Плавный переход
-                      transform: hover3 ? 'scale(1.1)' : 'scale(1)', // Увеличение при наведении
+                      fontSize: 8,
+                      top: -3,
+                      transition: "transform 0.2s", // Плавный переход
+                      transform: hover3 ? "scale(1.1)" : "scale(1)", // Увеличение при наведении
                     }}
                     onMouseEnter={() => setHover3(true)} // Устанавливаем состояние при наведении
                     onMouseLeave={() => setHover3(false)} // Сбрасываем состояние при уходе мыши
-                  > 
+                  >
                     Подготовка к Огэ\Егэ
                   </Button>
                 </li>
@@ -83,13 +89,16 @@ export function HomePage() {
               <li className="n">и создай свою историю</li>
               <div className="Inbox2">
                 <hr></hr>
-                <h4 className="Opsis">Платформа предлагает все необходимое для развития
-                                      молодого онлайн-образовательного предприятия.
-                                      Все инструменты для маркетинга, продаж объединены
-                                      в одном месте.</h4>
+                <h4 className="Opsis">
+                  Платформа предлагает все необходимое для развития молодого
+                  онлайн-образовательного предприятия. Все инструменты для
+                  маркетинга, продаж объединены в одном месте.
+                </h4>
               </div>
               <div className="ButtonAuth">
-              <button className="buttonAu" onClick={handleButtonClick}>Попробовать</button>
+                <button className="buttonAu" onClick={handleButtonClick}>
+                  Попробовать
+                </button>
               </div>
             </ul>
           </div>

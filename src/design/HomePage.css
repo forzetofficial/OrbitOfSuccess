@@ -7,8 +7,6 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #773575;
-  width: 1920px;
-  height: 1080px;
 }
 
 * {
@@ -16,7 +14,10 @@ html {
 }
 
 .img {
-  object-fit: cover;
+  height: 100vh; /* Занимает 70% высоты экрана */
+  width: auto;
+  max-width: 100%;
+  object-fit: ;
 }
 
 .container {
@@ -24,11 +25,14 @@ html {
   width: 100vw; /* Полная ширина экрана */
   height: 100vh; /* Полная высота экрана */
   position: relative;
+  justify-content: center; /* Центрирование содержимого по горизонтали */
+  align-items: center; /* Центрирование содержимого по вертикали */
 }
 
 .square {
-  width: 50%; /* Максимальная ширина квадрата */
-  height: 1080px; /* Максимальная высота квадрата */
+  width: 70%; /* Максимальная ширина квадрата */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  max-height: 1080px; /* Максимальная высота квадрата */
   background-color: #773575;
 }
 
@@ -36,21 +40,29 @@ html {
 @media (max-width: 600px) {
   .square {
     width: 70vw; /* Ширина квадрата - 70% от ширины экрана на маленьких экранах */
-    height: 70vw; /* Высота квадрата - 70% от ширины экрана на маленьких экранах */
+    height: auto; /* Высота автоматически подстраивается */
+    max-height: 70vw; /* Максимальная высота - 70% от ширины экрана */
+    margin: auto; /* Центрирование квадрата */
   }
 }
 
 @media (max-height: 600px) {
   .square {
-    width: 70vh; /* Ширина квадрата - 70% от высоты экрана на маленьких экранах */
+    width: auto; /* Автоматическая ширина для сохранения пропорций */
     height: 70vh; /* Высота квадрата - 70% от высоты экрана на маленьких экранах */
+    max-width: 70vh; /* Максимальная ширина - 70% от высоты экрана */
+    margin: auto; /* Центрирование квадрата */
   }
 }
 
 .Heading {
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  right: 60%;
   text-align: center;
   color: white;
-  font-size: 12px;
+  font-size: 1vw; /* Размер шрифта в зависимости от ширины экрана */
   font-weight: lighter;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -64,118 +76,111 @@ html {
 .list {
   display: flex;
   margin: 0 auto;
-  gap: 10px;
-  padding: 25px;
+  gap: 0.2vw; /* Использование vw для адаптивного расстояния между элементами */
+  padding: 0.5vw; /* Использование vw для адаптивного отступа */
 }
 
 .Inbox {
   display: flex;
-  width: 500px; /* Максимальная ширина квадрата */
-  height: 700px; /* Максимальная высота квадрата */
-  margin-left: 10%;
-  margin-top: 5%;
+  width: 70vh;
+  height: 70vh;
+  max-width: 70vw; /* Максимальная ширина - 70% от ширины экрана */
+  max-height: 70vh; /* Максимальная высота - 70% от высоты экрана */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
 }
 
 @media (max-width: 600px) {
   .Inbox {
-    width: 70vw; /* Ширина квадрата - 70% от ширины экрана на маленьких экранах */
-    height: 70vw; /* Высота квадрата - 70% от ширины экрана на маленьких экранах */
+    width: 90vw; /* Ширина квадрата - 90% от ширины экрана на маленьких экранах */
+    height: auto;
+    max-height: 90vw; /* Максимальная высота - 90% от ширины экрана */
+    margin-top: 5%;
   }
 }
 
 @media (max-height: 600px) {
   .Inbox {
-    width: 70vh; /* Ширина квадрата - 70% от высоты экрана на маленьких экранах */
-    height: 70vh; /* Высота квадрата - 70% от высоты экрана на маленьких экранах */
+    width: auto;
+    height: 70vh;
+    max-width: 70vh;
+    margin-top: 5%;
   }
 }
 
 .orb {
-  font-size: 55px;
+  font-size: 2.7em; /* Размер шрифта в зависимости от ширины экрана */
   font-family: "Dela Gothic One", sans-serif;
   color: white;
+  margin-left: 4%;
+  margin-right: auto;
+  margin-top: 0%;
+  top: 30%;
 }
 
 .ysp {
-  font-size: 100px;
+  font-size: 4.5em; /* Размер шрифта в зависимости от ширины экрана */
   font-family: "Dela Gothic One", sans-serif;
   color: white;
-  margin-top: -40px;
+  margin-left: 4%;
+  margin-right: auto;
+  margin-top: -5%;
+  margin-bottom: 0%;
 }
 
 .n {
-  font-size: 23px;
+  font-size: 1.4em; /* Размер шрифта в зависимости от ширины экрана */
   font-family: "Dela Gothic One", sans-serif;
   color: white;
-  margin-top: 5px;
-  letter-spacing: 1px;
+  margin-left: 4%;
+  margin-top: 1%;
 }
 
 .Inbox2 {
   display: flex;
-  width: 360px; /* Максимальная ширина квадрата */
-  height: 125px; /* Максимальная высота квадрата */
-  margin-left: -5px;
-  margin-top: 3%;
+  width: 70%;
+  height: auto;
+  max-width: 50vw; /* Максимальная ширина - 90% от ширины экрана */
+  margin-left: 4%;
+  margin-top: 5%;
 }
 
 hr {
-  width: 2px;
-  height: 110px;
+  width: 0.1vw; /* Ширина линии в зависимости от ширины экрана */
+  height: 14vh; /* Высота линии в зависимости от высоты экрана */
   background-color: white;
-  margin-left: 0%;
 }
 
 .Opsis {
   font-family: "Murecho", sans-serif;
-  color: white;
-  margin-left: 4%;
-  margin-top: 32px;
-  font-size: 14px;
-  font-style: normal;
   font-weight: lighter;
+  color: white;
+  font-size: 1em;
+  margin-left: 4%;
+  margin-top: 5%;
 }
 
 .ButtonAuth {
   display: flex;
-  width: 310px; /* Максимальная ширина квадрата */
-  height: 70px; /* Максимальная высота квадрата */
-  margin-left: 5px;
-  margin-top: 5%;
+  width: 70%;
+  height: 10%;
+  margin-top: 8%;
+  margin-left: 4%;
 }
 
 .buttonAu {
+  font-weight: bold;
   background-color: #eeab81;
   border-radius: 365px;
-  width: 310px;
-  height: 60px;
-  text-align: center;
-  font-family: "Murecho", sans-serif;
-  font-size: medium;
-  font-weight: bold;
-  border-style: none;
+  width: calc(100% - 2vw); /* Ширина кнопки с учетом отступов */
+  padding: 1vw; /* Использование vw для адаптивного отступа внутри кнопки */
 }
 
 .buttonAu:hover {
   background-color: #cc9471;
-  border-radius: 365px;
-  width: 310px;
-  height: 60px;
-  text-align: center;
-  font-family: "Murecho", sans-serif;
-  font-size: medium;
-  font-weight: bold;
-  border-style: none;
 }
 
 .buttonAu:active {
   background-color: #9c7257;
-  border-radius: 365px;
-  width: 310px;
-  height: 60px;
-  text-align: center;
-  font-family: "Murecho", sans-serif;
-  font-size: medium;
-  font-weight: bold;
-  border-style: none;
 }
